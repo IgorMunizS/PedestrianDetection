@@ -69,8 +69,9 @@ def squeezenet(x,WEIGHT_DECAY):
     fire9 = _fire_layer(
         'fire9', fire8, s1x1=64, e1x1=256, e3x3=256)
 
+    pool9 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool9")(fire9)
 
-    return fire9
+    return pool9
 
 
 def relu(x): return Activation('relu')(x)
