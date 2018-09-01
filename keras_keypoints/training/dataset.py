@@ -15,10 +15,10 @@ from training.label_maps import create_heatmap, create_paf
 
 
 ALL_PAF_MASK = np.repeat(
-    np.ones((46, 46, 1), dtype=np.uint8), 38, axis=2)
+    np.ones((23, 23, 1), dtype=np.uint8), 38, axis=2)
 
 ALL_HEATMAP_MASK = np.repeat(
-    np.ones((46, 46, 1), dtype=np.uint8), 19, axis=2)
+    np.ones((23, 23, 1), dtype=np.uint8), 19, axis=2)
 
 AUGMENTORS_LIST = [
         ScaleAug(scale_min=0.5,
@@ -166,10 +166,10 @@ def build_sample(components):
         mask_paf = create_all_mask(meta.mask, 38, stride=8)
         mask_heatmap = create_all_mask(meta.mask, 19, stride=8)
 
-    heatmap = create_heatmap(JointsLoader.num_joints_and_bkg, 46, 46,
+    heatmap = create_heatmap(JointsLoader.num_joints_and_bkg, 23, 23,
                              meta.aug_joints, 7.0, stride=8)
 
-    pafmap = create_paf(JointsLoader.num_connections, 46, 46,
+    pafmap = create_paf(JointsLoader.num_connections, 23, 23,
                         meta.aug_joints, 1, stride=8)
 
     # release reference to the image/mask/augmented data. Otherwise it would easily consume all memory at some point
