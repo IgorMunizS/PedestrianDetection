@@ -182,8 +182,8 @@ if __name__ == '__main__':
     model = get_training_model(weight_decay)
 
     # restore weights
-    last_epoch = restore_weights(weights_best_file, model)
-    # last_epoch = restore_weights("../model/squeeze_imagenet.h5", model)
+    #last_epoch = restore_weights(weights_best_file, model)
+    last_epoch = restore_weights("../model/squeeze_imagenet.h5", model)
     print(model.summary())
 
     # prepare generators
