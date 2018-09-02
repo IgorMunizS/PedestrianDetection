@@ -163,7 +163,7 @@ def build_sample(components):
         mask_paf = ALL_PAF_MASK
         mask_heatmap = ALL_HEATMAP_MASK
     else:
-        print(meta.mask)
+        print(meta.mask.shape)
         mask_paf = create_all_mask(meta.mask, 38, stride=8)
         mask_heatmap = create_all_mask(meta.mask, 19, stride=8)
 
