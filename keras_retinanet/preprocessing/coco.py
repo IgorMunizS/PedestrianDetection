@@ -145,6 +145,3 @@ class CocoGenerator(Generator):
         annotations[:, 3] = annotations[:, 1] + annotations[:, 3]
 
         return annotations
-
-
-
