@@ -147,4 +147,4 @@ class CocoGenerator(Generator):
         return annotations
 
 
-a = CocoGenerator()
+
