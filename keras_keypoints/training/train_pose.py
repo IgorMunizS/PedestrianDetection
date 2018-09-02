@@ -12,7 +12,7 @@ from keras.layers.convolutional import Conv2D
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
-from model.cmu_model import get_training_model
+from model.squeeze_model import get_training_model
 from training.optimizers import MultiSGD
 from training.dataset import get_dataflow, batch_dataflow
 
