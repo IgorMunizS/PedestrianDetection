@@ -1,6 +1,7 @@
 from keras.models import Model
 from keras.layers.merge import Concatenate
 from keras.layers import Activation, Input, Lambda, concatenate, MaxPool2D
+from keras.layers.pooling import MaxPooling2D
 from keras.layers.convolutional import Conv2D
 
 from keras.layers.merge import Multiply
@@ -44,21 +45,21 @@ def squeezenet(x,WEIGHT_DECAY):
                    use_bias=True, kernel_initializer=TruncatedNormal(stddev=0.001),
                    kernel_regularizer=l2(WEIGHT_DECAY))(x)
 
-    pool1 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool1")(conv1)
+    pool1 = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), name="pool1")(conv1)
 
     fire2 = _fire_layer(name="fire2", input=pool1, s1x1=16, e1x1=64, e3x3=64)
 
     fire3 = _fire_layer(
         'fire3', fire2, s1x1=16, e1x1=64, e3x3=64)
-    pool3 = MaxPool2D(
-        pool_size=(3, 3), strides=(2, 2), padding='SAME', name='pool3')(fire3)
+    pool3 = MaxPooling2D(
+        pool_size=(3, 3), strides=(2, 2), name='pool3')(fire3)
 
     fire4 = _fire_layer(
         'fire4', pool3, s1x1=32, e1x1=128, e3x3=128)
     fire5 = _fire_layer(
         'fire5', fire4, s1x1=32, e1x1=128, e3x3=128)
 
-    pool5 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool5")(fire5)
+    pool5 = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), name="pool5")(fire5)
 
     fire6 = _fire_layer(
         'fire6', pool5, s1x1=48, e1x1=192, e3x3=192)
