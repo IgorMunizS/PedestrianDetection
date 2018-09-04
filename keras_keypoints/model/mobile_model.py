@@ -56,12 +56,12 @@ def _conv_block(inputs, filters, alpha, kernel=(3, 3), strides=(1, 1)):
     """
     channel_axis = -1
     filters = int(filters * alpha)
-    x = layers.ZeroPadding2D(padding=((0, 1), (0, 1)), name='conv1_pad')(inputs)
+    #x = layers.ZeroPadding2D(padding=((0, 1), (0, 1)), name='conv1_pad')(inputs)
     x = layers.Conv2D(filters, kernel,
                       padding='same',
                       use_bias=True,
                       strides=strides,
-                      name='conv1')(x)
+                      name='conv1')(inputs)
     x = layers.BatchNormalization(axis=channel_axis, name='conv1_bn')(x)
     return layers.ReLU(6., name='conv1_relu')(x)
 
@@ -123,7 +123,7 @@ def _depthwise_conv_block(inputs, pointwise_conv_filters, alpha,
         x = layers.ZeroPadding2D(((0, 1), (0, 1)),
                                  name='conv_pad_%d' % block_id)(inputs)
     x = layers.DepthwiseConv2D((3, 3),
-                               padding='same' if strides == (1, 1) else 'same',
+                               padding='same' if strides == (1, 1) else 'valid',
                                depth_multiplier=depth_multiplier,
                                strides=strides,
                                use_bias=True,
@@ -133,7 +133,7 @@ def _depthwise_conv_block(inputs, pointwise_conv_filters, alpha,
     x = layers.ReLU(6., name='conv_dw_%d_relu' % block_id)(x)
 
     x = layers.Conv2D(pointwise_conv_filters, (1, 1),
-                      padding='valid',
+                      padding='same',
                       use_bias=True,
                       strides=(1, 1),
                       name='conv_pw_%d' % block_id)(x)
