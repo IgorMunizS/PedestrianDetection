@@ -41,7 +41,7 @@ def _fire_layer(name, input, s1x1, e1x1, e3x3, stdd=0.01, WEIGHT_DECAY=0.001):
 def squeezenet(x,WEIGHT_DECAY):
 
 
-    conv1 = Conv2D(filters=64, kernel_size=(3, 3), strides=(2, 2), padding="SAME", activation='relu',
+    conv1 = Conv2D(filters=64, kernel_size=(3, 3), strides=(1, 1), padding="SAME", activation='relu',
                    use_bias=True, kernel_initializer=TruncatedNormal(stddev=0.001),
                    kernel_regularizer=l2(WEIGHT_DECAY))(x)
 
@@ -59,20 +59,20 @@ def squeezenet(x,WEIGHT_DECAY):
     fire5 = _fire_layer(
         'fire5', fire4, s1x1=32, e1x1=128, e3x3=128)
 
-    #pool5 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool5")(fire5)
+    pool5 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool5")(fire5)
 
     fire6 = _fire_layer(
-        'fire6', fire5, s1x1=48, e1x1=192, e3x3=192)
+        'fire6', pool5, s1x1=48, e1x1=192, e3x3=192)
     fire7 = _fire_layer(
         'fire7', fire6, s1x1=48, e1x1=192, e3x3=192)
-    # fire8 = _fire_layer(
-    #     'fire8', fire7, s1x1=64, e1x1=256, e3x3=256)
-    # fire9 = _fire_layer(
-    #     'fire9', fire8, s1x1=64, e1x1=256, e3x3=256)
+    fire8 = _fire_layer(
+        'fire8', fire7, s1x1=64, e1x1=256, e3x3=256)
+    fire9 = _fire_layer(
+        'fire9', fire8, s1x1=64, e1x1=256, e3x3=256)
 
     # pool9 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool9")(fire9)
 
-    return fire7
+    return fire9
 
 
 def relu(x): return Activation('relu')(x)
