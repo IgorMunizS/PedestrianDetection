@@ -200,7 +200,7 @@ def MobileNet(input,
             backend that does not support separable convolutions.
     """
 
-    x = _conv_block(input, 32, alpha, strides=(2, 2))
+    x = _conv_block(input, 32, alpha, strides=(1, 1))
     x = _depthwise_conv_block(x, 64, alpha, depth_multiplier, block_id=1)
 
     x = _depthwise_conv_block(x, 128, alpha, depth_multiplier,
