@@ -19,7 +19,7 @@ from training.optimizers import MultiSGD
 from training.dataset import get_dataflow, batch_dataflow
 
 
-batch_size = 5
+batch_size = 10
 base_lr = 4e-5 # 2e-5
 momentum = 0.9
 weight_decay = 5e-4
@@ -185,10 +185,11 @@ if __name__ == '__main__':
 
     if args.model == 'cmu':
         model = cmu_model.get_training_model(weight_decay)
-    elif args.model == 'squezee':
+    elif args.model == 'squeeze':
         model = squeeze_model.get_training_model(weight_decay)
     elif args.model == 'mobile':
         model = mobile_model.get_training_model(weight_decay)
+
     # restore weights
     last_epoch = restore_weights(weights_best_file, model)
     #last_epoch = restore_weights("../model/squeeze_imagenet.h5", model)

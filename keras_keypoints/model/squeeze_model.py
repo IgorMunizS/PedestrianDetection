@@ -41,7 +41,7 @@ def _fire_layer(name, input, s1x1, e1x1, e3x3, stdd=0.01, WEIGHT_DECAY=0.001):
 def squeezenet(x,WEIGHT_DECAY):
 
 
-    conv1 = Conv2D(filters=64, kernel_size=(3, 3), strides=(2, 2), padding="SAME", activation='relu',
+    conv1 = Conv2D(filters=64, kernel_size=(3, 3), strides=(1, 1), padding="SAME", activation='relu',
                    use_bias=True, kernel_initializer=TruncatedNormal(stddev=0.001),
                    kernel_regularizer=l2(WEIGHT_DECAY))(x)
 
