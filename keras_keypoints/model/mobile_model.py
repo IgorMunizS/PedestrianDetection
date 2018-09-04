@@ -54,7 +54,7 @@ def _conv_block(inputs, filters, alpha, kernel=(3, 3), strides=(1, 1)):
     # Returns
         Output tensor of block.
     """
-    channel_axis = 1 if backend.image_data_format() == 'channels_first' else -1
+    channel_axis = -1
     filters = int(filters * alpha)
     x = layers.ZeroPadding2D(padding=((0, 1), (0, 1)), name='conv1_pad')(inputs)
     x = layers.Conv2D(filters, kernel,
@@ -114,7 +114,7 @@ def _depthwise_conv_block(inputs, pointwise_conv_filters, alpha,
     # Returns
         Output tensor of block.
     """
-    channel_axis = 1 if backend.image_data_format() == 'channels_first' else -1
+    channel_axis = -1
     pointwise_conv_filters = int(pointwise_conv_filters * alpha)
 
     if strides == (1, 1):
@@ -199,8 +199,6 @@ def MobileNet(input,
         RuntimeError: If attempting to run this model with a
             backend that does not support separable convolutions.
     """
-    global backend, layers, models, keras_utils
-    backend, layers, models, keras_utils = get_submodules_from_kwargs(kwargs)
 
     x = _conv_block(input, 32, alpha, strides=(2, 2))
     x = _depthwise_conv_block(x, 64, alpha, depth_multiplier, block_id=1)
