@@ -41,13 +41,13 @@ def _fire_layer(name, input, s1x1, e1x1, e3x3, stdd=0.01, WEIGHT_DECAY=0.001):
 def squeezenet(x,WEIGHT_DECAY):
 
 
-    conv1 = Conv2D(filters=64, kernel_size=(3, 3), strides=(1, 1), padding="SAME", activation='relu',
+    conv1 = Conv2D(filters=64, kernel_size=(3, 3), strides=(2, 2), padding="SAME", activation='relu',
                    use_bias=True, kernel_initializer=TruncatedNormal(stddev=0.001),
                    kernel_regularizer=l2(WEIGHT_DECAY))(x)
 
     pool1 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool1")(conv1)
 
-    fire2 = _fire_layer(name="fire2", input=pool1, s1x1=16, e1x1=64, e3x3=64)
+    fire2 = _fire_layer(name="fire2", input=conv1, s1x1=16, e1x1=64, e3x3=64)
 
     fire3 = _fire_layer(
         'fire3', fire2, s1x1=16, e1x1=64, e3x3=64)
