@@ -12,7 +12,7 @@ from keras.layers.convolutional import Conv2D
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
-from model.squeeze_model import get_training_model
+from model.cmu_model import get_training_model
 from training.optimizers import MultiSGD
 from training.dataset import get_dataflow, batch_dataflow
 
@@ -182,8 +182,8 @@ if __name__ == '__main__':
     model = get_training_model(weight_decay)
 
     # restore weights
-    #last_epoch = restore_weights(weights_best_file, model)
-    last_epoch = restore_weights("../model/squeeze_imagenet.h5", model)
+    last_epoch = restore_weights(weights_best_file, model)
+    #last_epoch = restore_weights("../model/squeeze_imagenet.h5", model)
     print(model.summary())
 
     # prepare generators

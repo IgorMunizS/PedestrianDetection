@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ae4f77-b7db-471b-932c-8eb90cbc66e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/keras_keypoints/model/mobile_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +31,7 @@
         <counts>
           <entry key="INFO" value="1" />
           <entry key="ipynb" value="3" />
-          <entry key="py" value="41" />
+          <entry key="py" value="42" />
           <entry key="pyx" value="1" />
         </counts>
       </usages-collector>
@@ -39,19 +39,19 @@
         <counts>
           <entry key="IPNB" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="41" />
+          <entry key="Python" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1267" />
+          <entry key="py" value="1280" />
           <entry key="txt" value="448" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="448" />
-          <entry key="Python" value="1267" />
+          <entry key="Python" value="1280" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -99,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="1105">
+              <caret line="65" column="24" lean-forward="true" selection-end-line="230" selection-end-column="16" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -112,9 +112,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/keras_keypoints/model/mobile_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+                <marker date="1536069278817" expanded="true" signature="420:426" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2678">
+            <state relative-caret-position="3179">
               <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -183,6 +196,7 @@
         <option value="$PROJECT_DIR$/keras_keypoints/training/dataset.py" />
         <option value="$PROJECT_DIR$/keras_keypoints/training/train_pose.py" />
         <option value="$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py" />
+        <option value="$PROJECT_DIR$/keras_keypoints/model/mobile_model.py" />
       </list>
     </option>
   </component>
@@ -204,6 +218,17 @@
             <path>
               <item name="PedestrianDetection" type="b2602c69:ProjectViewProjectNode" />
               <item name="PedestrianDetection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PedestrianDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PedestrianDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="keras_keypoints" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PedestrianDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PedestrianDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="keras_keypoints" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -508,11 +533,25 @@
       <option name="project" value="LOCAL" />
       <updated>1536067742143</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="change squeeze model">
+      <created>1536068297524</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1536068297524</updated>
+    </task>
+    <task id="LOCAL-00025" summary="change squeeze model">
+      <created>1536068661297</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1536068661297</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18388106" />
@@ -821,16 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2678">
-          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keras_keypoints/training/train_pose.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -843,8 +872,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="1105">
+          <caret line="65" column="24" lean-forward="true" selection-end-line="230" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/mobile_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1536069278817" expanded="true" signature="420:426" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="208" column="16" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
