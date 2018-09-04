@@ -58,7 +58,7 @@ def _conv_block(inputs, filters, alpha, kernel=(3, 3), strides=(1, 1)):
     filters = int(filters * alpha)
     x = layers.ZeroPadding2D(padding=((0, 1), (0, 1)), name='conv1_pad')(inputs)
     x = layers.Conv2D(filters, kernel,
-                      padding='valid',
+                      padding='same',
                       use_bias=True,
                       strides=strides,
                       name='conv1')(x)
@@ -123,7 +123,7 @@ def _depthwise_conv_block(inputs, pointwise_conv_filters, alpha,
         x = layers.ZeroPadding2D(((0, 1), (0, 1)),
                                  name='conv_pad_%d' % block_id)(inputs)
     x = layers.DepthwiseConv2D((3, 3),
-                               padding='same' if strides == (1, 1) else 'valid',
+                               padding='same' if strides == (1, 1) else 'same',
                                depth_multiplier=depth_multiplier,
                                strides=strides,
                                use_bias=True,
