@@ -47,7 +47,7 @@ def squeezenet(x,WEIGHT_DECAY):
 
     pool1 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool1")(conv1)
 
-    fire2 = _fire_layer(name="fire2", input=conv1, s1x1=16, e1x1=64, e3x3=64)
+    fire2 = _fire_layer(name="fire2", input=pool1, s1x1=16, e1x1=64, e3x3=64)
 
     fire3 = _fire_layer(
         'fire3', fire2, s1x1=16, e1x1=64, e3x3=64)
@@ -62,7 +62,7 @@ def squeezenet(x,WEIGHT_DECAY):
     pool5 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool5")(fire5)
 
     fire6 = _fire_layer(
-        'fire6', pool5, s1x1=48, e1x1=192, e3x3=192)
+        'fire6', fire5, s1x1=48, e1x1=192, e3x3=192)
     fire7 = _fire_layer(
         'fire7', fire6, s1x1=48, e1x1=192, e3x3=192)
     fire8 = _fire_layer(
