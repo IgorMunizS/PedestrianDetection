@@ -58,7 +58,7 @@ def _conv_block(inputs, filters, alpha, kernel=(3, 3), strides=(1, 1)):
     filters = int(filters * alpha)
     x = layers.ZeroPadding2D(padding=((0, 1), (0, 1)), name='conv1_pad')(inputs)
     x = layers.Conv2D(filters, kernel,
-                      padding='same',
+                      padding='valid',
                       use_bias=True,
                       strides=strides,
                       name='conv1')(x)
