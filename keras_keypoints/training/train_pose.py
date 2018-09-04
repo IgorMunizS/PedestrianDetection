@@ -4,7 +4,7 @@ import re
 import sys
 import pandas
 from functools import partial
-
+import argparse
 import keras.backend as K
 from keras.applications.vgg19 import VGG19
 from keras.callbacks import LearningRateScheduler, ModelCheckpoint, CSVLogger, TensorBoard
@@ -12,7 +12,9 @@ from keras.layers.convolutional import Conv2D
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
-from model.mobile_model import get_training_model
+from model import mobile_model
+from model import cmu_model
+from model import squeeze_model
 from training.optimizers import MultiSGD
 from training.dataset import get_dataflow, batch_dataflow
 
@@ -176,11 +178,17 @@ def gen(df):
 
 
 if __name__ == '__main__':
-
+    parser = argparse.ArgumentParser(description='Training codes for Keras Pose Estimation')
+    parser.add_argument('--model', default='cmu', help='model name')
+    args = parser.parse_args()
     # get the model
 
-    model = get_training_model(weight_decay)
-
+    if args.model == 'cmu':
+        model = cmu_model.get_training_model(weight_decay)
+    elif args.model == 'squezee':
+        model = squeeze_model.get_training_model(weight_decay)
+    elif args.model == 'mobile':
+        model = mobile_model.get_training_model(weight_decay)
     # restore weights
     last_epoch = restore_weights(weights_best_file, model)
     #last_epoch = restore_weights("../model/squeeze_imagenet.h5", model)
