@@ -62,7 +62,7 @@ def squeezenet(x,WEIGHT_DECAY):
     pool5 = MaxPool2D(pool_size=(3, 3), strides=(2, 2), padding='SAME', name="pool5")(fire5)
 
     fire6 = _fire_layer(
-        'fire6', fire5, s1x1=48, e1x1=192, e3x3=192)
+        'fire6', pool5, s1x1=48, e1x1=192, e3x3=192)
     fire7 = _fire_layer(
         'fire7', fire6, s1x1=48, e1x1=192, e3x3=192)
     fire8 = _fire_layer(
