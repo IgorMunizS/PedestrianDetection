@@ -74,7 +74,7 @@ def restore_weights(weights_best_file, model):
             return 0
         else:
 
-            return get_last_epoch() + 1
+            return 1
     else:
         print("Loading vgg19 weights...")
 
