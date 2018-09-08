@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3ae4f77-b7db-471b-932c-8eb90cbc66e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras_keypoints/training/train_pose.py" beforeDir="false" afterPath="$PROJECT_DIR$/keras_keypoints/training/train_pose.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,16 +14,16 @@
     <session id="-1704934559">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="6" />
-          <entry key="project.open.time.3" value="4" />
+          <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="4" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,12 +44,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="1739" />
-          <entry key="txt" value="592" />
+          <entry key="txt" value="607" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="592" />
+          <entry key="PLAIN_TEXT" value="607" />
           <entry key="Python" value="1739" />
         </counts>
       </usages-collector>
@@ -67,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/keras_keypoints/training/train_pose.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+            <state relative-caret-position="-3668">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -102,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
+            <state relative-caret-position="1105">
               <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
@@ -114,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keras_keypoints/model/mobile_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4352">
-              <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
+            <state relative-caret-position="346">
+              <caret line="219" column="75" selection-start-line="202" selection-start-column="3" selection-end-line="219" selection-end-column="75" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
                 <marker date="1536077068477" expanded="true" signature="10427:10429" ph="..." />
@@ -202,7 +201,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1431" />
+    <option name="x" value="65" />
     <option name="y" value="-4" />
     <option name="width" value="1301" />
     <option name="height" value="772" />
@@ -663,11 +662,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536078968820</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="get last epoch">
+      <created>1536169998019</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1536169998019</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18388106" />
@@ -769,7 +775,8 @@
     <MESSAGE value="reduce layers in squeeze net" />
     <MESSAGE value="add model parser in train pose" />
     <MESSAGE value="fix squeeze model" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix squeeze model" />
+    <MESSAGE value="get last epoch" />
+    <option name="LAST_COMMIT_MESSAGE" value="get last epoch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -975,13 +982,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/mobile_model.py">
+    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4352">
-          <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="265" selection-end-column="12" />
+        <state relative-caret-position="1105">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <marker date="1536077068477" expanded="true" signature="10427:10429" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1003,20 +1009,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py">
+    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/mobile_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <caret line="219" column="75" selection-start-line="202" selection-start-column="3" selection-end-line="219" selection-end-column="75" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
+            <marker date="1536077068477" expanded="true" signature="10427:10429" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/keras_keypoints/training/train_pose.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+        <state relative-caret-position="-3668">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

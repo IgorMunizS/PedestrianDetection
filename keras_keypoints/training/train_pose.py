@@ -243,7 +243,7 @@ if __name__ == '__main__':
     loss_funcs = get_loss_funcs()
     model.compile(loss=loss_funcs, optimizer=multisgd, metrics=["accuracy"])
     model.fit_generator(train_gen,
-                        steps_per_epoch=train_samples // batch_size,
+                        steps_per_epoch=5000,
                         epochs=max_iter,
                         callbacks=callbacks_list,
                         # validation_data=val_di,
