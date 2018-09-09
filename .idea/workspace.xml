@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3ae4f77-b7db-471b-932c-8eb90cbc66e7" name="Default Changelist" comment="">
+    <list default="true" id="e3ae4f77-b7db-471b-932c-8eb90cbc66e7" name="Default Changelist" comment="add adam optimizer">
+      <change afterPath="$PROJECT_DIR$/keras_keypoints/model/cmu_thin_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +31,7 @@
         <counts>
           <entry key="INFO" value="1" />
           <entry key="ipynb" value="3" />
-          <entry key="py" value="42" />
+          <entry key="py" value="43" />
           <entry key="pyx" value="1" />
         </counts>
       </usages-collector>
@@ -38,19 +39,19 @@
         <counts>
           <entry key="IPNB" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="42" />
+          <entry key="Python" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1739" />
-          <entry key="txt" value="607" />
+          <entry key="py" value="1794" />
+          <entry key="txt" value="664" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="607" />
-          <entry key="Python" value="1739" />
+          <entry key="PLAIN_TEXT" value="664" />
+          <entry key="Python" value="1794" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -63,13 +64,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keras_keypoints/training/train_pose.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3668">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="276">
+              <caret line="253" selection-start-line="253" selection-end-line="253" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_thin_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="204" column="16" lean-forward="true" selection-start-line="204" selection-start-column="16" selection-end-line="204" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2669">
-              <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
+            <state relative-caret-position="344">
+              <caret line="164" column="26" selection-end-line="208" selection-end-column="16" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -197,6 +210,7 @@
         <option value="$PROJECT_DIR$/keras_keypoints/model/mobile_model.py" />
         <option value="$PROJECT_DIR$/keras_keypoints/model/squeeze_model.py" />
         <option value="$PROJECT_DIR$/keras_keypoints/training/train_pose.py" />
+        <option value="$PROJECT_DIR$/keras_keypoints/model/cmu_thin_model.py" />
       </list>
     </option>
   </component>
@@ -223,6 +237,12 @@
               <item name="PedestrianDetection" type="b2602c69:ProjectViewProjectNode" />
               <item name="PedestrianDetection" type="462c0819:PsiDirectoryNode" />
               <item name="keras_keypoints" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PedestrianDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PedestrianDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="keras_keypoints" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -669,7 +689,21 @@
       <option name="project" value="LOCAL" />
       <updated>1536169998019</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="change number of steps per epoch">
+      <created>1536369401089</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1536369401089</updated>
+    </task>
+    <task id="LOCAL-00042" summary="add adam optimizer">
+      <created>1536495842516</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1536495842516</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -776,7 +810,9 @@
     <MESSAGE value="add model parser in train pose" />
     <MESSAGE value="fix squeeze model" />
     <MESSAGE value="get last epoch" />
-    <option name="LAST_COMMIT_MESSAGE" value="get last epoch" />
+    <MESSAGE value="change number of steps per epoch" />
+    <MESSAGE value="add adam optimizer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add adam optimizer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -992,16 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keras_keypoints/training/dataset_inspect.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -1022,10 +1048,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/keras_keypoints/training/train_pose.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3668">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="276">
+          <caret line="253" selection-start-line="253" selection-end-line="253" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="164" column="26" selection-end-line="208" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keras_keypoints/model/cmu_thin_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="204" column="16" lean-forward="true" selection-start-line="204" selection-start-column="16" selection-end-line="204" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
