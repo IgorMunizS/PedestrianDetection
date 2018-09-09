@@ -9,6 +9,7 @@ import keras.backend as K
 from keras.applications.vgg19 import VGG19
 from keras.callbacks import LearningRateScheduler, ModelCheckpoint, CSVLogger, TensorBoard
 from keras.layers.convolutional import Conv2D
+from keras.optimizers import Adam
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
@@ -237,11 +238,11 @@ if __name__ == '__main__':
 
     multisgd = MultiSGD(lr=base_lr, momentum=momentum, decay=0.0,
                         nesterov=False, lr_mult=lr_multipliers)
-
+    opt = Adam(lr=1e-4)
     # start training
 
     loss_funcs = get_loss_funcs()
-    model.compile(loss=loss_funcs, optimizer=multisgd, metrics=["accuracy"])
+    model.compile(loss=loss_funcs, optimizer=opt, metrics=["accuracy"])
     model.fit_generator(train_gen,
                         steps_per_epoch=5000,
                         epochs=max_iter,
