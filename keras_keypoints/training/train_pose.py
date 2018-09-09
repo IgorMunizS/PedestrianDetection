@@ -16,6 +16,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from model import mobile_model
 from model import cmu_model
 from model import squeeze_model
+from model import cmu_thin_model
 from training.optimizers import MultiSGD
 from training.dataset import get_dataflow, batch_dataflow
 
@@ -190,6 +191,8 @@ if __name__ == '__main__':
         model = squeeze_model.get_training_model(weight_decay)
     elif args.model == 'mobile':
         model = mobile_model.get_training_model(weight_decay)
+    elif args.model == 'cmu-thin':
+        model = cmu_thin_model.get_training_model(weight_decay)
 
     # restore weights
     last_epoch = restore_weights(weights_best_file, model)
