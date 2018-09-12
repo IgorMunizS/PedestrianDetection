@@ -30,7 +30,7 @@ gamma = 0.333
 stepsize = 136106 #68053   // after each stepsize iterations update learning rate: lr=lr*gamma
 max_iter = 200000 # 600000
 
-weights_best_file = "weights.best.h5"
+weights_best_file = "model.{epoch:02d}-{loss:.2f}.hdf5"
 training_log = "training.csv"
 logs_dir = "./logs"
 
